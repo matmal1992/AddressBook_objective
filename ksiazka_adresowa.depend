@@ -16,15 +16,17 @@
 
 1680791940 source:c:\users\mateusz\desktop\ks_oop\ksiazka_adresowa\uzytkownik.cpp
 
-1680855977 source:c:\users\mateusz\desktop\code_blocks\21_ks_oop\ksiazka_adresowa\main.cpp
+1680856213 source:c:\users\mateusz\desktop\code_blocks\21_ks_oop\ksiazka_adresowa\main.cpp
 	<iostream>
 	<vector>
 	"ksiazkaAdresowa.h"
 
-1680795073 c:\users\mateusz\desktop\code_blocks\21_ks_oop\ksiazka_adresowa\ksiazkaadresowa.h
+1680859183 c:\users\mateusz\desktop\code_blocks\21_ks_oop\ksiazka_adresowa\ksiazkaadresowa.h
 	<iostream>
 	<vector>
 	"Uzytkownik.h"
+	<fstream>
+	<sstream>
 
 1680811955 c:\users\mateusz\desktop\code_blocks\21_ks_oop\ksiazka_adresowa\uzytkownik.h
 	<iostream>

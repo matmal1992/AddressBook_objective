@@ -1,6 +1,7 @@
+#ifndef UZYTKOWNIK_H
+#define UZYTKOWNIK_H
+
 #include <iostream>
-#include <string>
-#include <windows.h>
 
 using namespace std;
 
@@ -21,3 +22,5 @@ class Uzytkownik
         string pobierzHaslo();
 
 };
+
+#endif

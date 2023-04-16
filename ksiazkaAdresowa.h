@@ -1,8 +1,8 @@
-#ifndef KSIAZKAADRESOWA_H
-#define KSIAZKAADRESOWA_H
-
 #include <iostream>
 #include "UzytkownikMenager.h"
+
+#ifndef KSIAZKAADRESOWA_H
+#define KSIAZKAADRESOWA_H
 
 using namespace std;
 
@@ -13,6 +13,7 @@ class KsiazkaAdresowa
 
 
     public:
+        KsiazkaAdresowa();
         void rejestracjaUzytkownika();
         void wypiszWszystkichUzytkownikow();
 

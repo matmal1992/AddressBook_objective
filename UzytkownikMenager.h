@@ -1,5 +1,4 @@
-#ifndef UZYTKOWNIKMENAGER_H
-#define UZYTKOWNIKMENAGER_H
+
 
 #include <iostream>
 #include <vector>
@@ -7,6 +6,9 @@
 #include "PlikZUzytkownikami.h"
 #include <fstream>
 #include <sstream>
+
+#ifndef UZYTKOWNIKMENAGER_H
+#define UZYTKOWNIKMENAGER_H
 
 using namespace std;
 
@@ -26,6 +28,7 @@ public:
     void rejestracjaUzytkownika();
     int logowanieUzytkownika();
     void wypiszWszystkichUzytkownikow();
+    void wczytajUzytkownikowZPliku();
 };
 
 #endif

@@ -4,6 +4,9 @@
 #include <fstream>
 #include <sstream>
 
+#ifndef PLIKZUZYTKOWNIKAMI_H
+#define PLIKZUZYTKOWNIKAMI_H
+
 using namespace std;
 
 class PlikZUzytkownikami
@@ -17,7 +20,11 @@ private:
 
 public:
     void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
+    vector <Uzytkownik> wczytajUzytkownikowZPliku();
+    Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
     PlikZUzytkownikami();
 
 
 };
+
+#endif

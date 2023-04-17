@@ -20,6 +20,7 @@ class KsiazkaAdresowa
 
         void rejestracjaUzytkownika();
         void wypiszWszystkichUzytkownikow();
+        int logowanieUzytkownika();
 
 };
 

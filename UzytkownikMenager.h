@@ -4,6 +4,7 @@
 #include <vector>
 #include "Uzytkownik.h"
 #include "PlikZUzytkownikami.h"
+#include "MetodyPomocnicze.h"
 #include <fstream>
 #include <sstream>
 
@@ -30,6 +31,7 @@ public:
     int logowanieUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
+    string wczytajLinie();
 };
 
 #endif

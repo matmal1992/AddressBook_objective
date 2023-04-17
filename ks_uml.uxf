@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>342</x>
+      <y>9</y>
+      <w>351</w>
+      <h>333</h>
+    </coordinates>
+    <panel_attributes>KsiazkaAdresowa
+-
+-
+- uzytkownikMenadzer : UzytkownikMenadzer
+-
++ KsiazkaAdresowa()
++ rejestracjaUzytkownika() : void
++ wypiszWszystkichUzytkownikow() : void
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>153</y>
+      <w>90</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Uzytkownik
+-
+-
+- id: int
+- login: string
+- haslo: string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>207</x>
+      <y>162</y>
+      <w>90</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>Adresat
+-
+-
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>720</x>
+      <y>90</y>
+      <w>261</w>
+      <h>225</h>
+    </coordinates>
+    <panel_attributes>UzytkownikMenager
+-
+-
+- idZalogowanegoUzytkownika : int
+- uzytkownicy : vector &lt;Uzytkownik&gt; 
+- plikZUzytkownikami : PlikZUzytkownikami
+-
++ rejestracjaUzytkownika() : void
++ logowanieUzytkownika() : int
++ wypiszWszystkichUzytkownikow() : void
++ wczytajUzytkownikowZPliku() : void
+- podajDaneNowegoUzytkownika() : Uzytkownik 
+- pobierzIdNowegoUzytkownika() : int
+- czyIstniejeLogin(string login) : bool
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>423</y>
+      <w>360</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>PlikZUzytkownikami
+-
+-
+- nazwaPlikuZUzytkownikami : string
+- plikTekstowy : fstream
+-
+ 
+- czyPlikJestPusty() : bool
+- zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik) : string
++ PlikZUzytkownikami()
++ wczytajUzytkownikowZPliku() : vector &lt;Uzytkownicy&gt;
++ dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik) : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>117</x>
+      <y>423</y>
+      <w>288</w>
+      <h>243</h>
+    </coordinates>
+    <panel_attributes>MetodyPomocnicze
+-
+-
++ konwerjsaIntNaString(int liczba) : string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

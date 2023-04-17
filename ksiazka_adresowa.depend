@@ -16,12 +16,12 @@
 
 1680791940 source:c:\users\mateusz\desktop\ks_oop\ksiazka_adresowa\uzytkownik.cpp
 
-1681727868 source:c:\users\mateusz\desktop\code_blocks\21_ks_oop\ksiazka_adresowa\main.cpp
+1681740381 source:c:\users\mateusz\desktop\code_blocks\21_ks_oop\ksiazka_adresowa\main.cpp
 	<iostream>
 	<vector>
 	"ksiazkaAdresowa.h"
 
-1681727868 c:\users\mateusz\desktop\code_blocks\21_ks_oop\ksiazka_adresowa\ksiazkaadresowa.h
+1681741805 c:\users\mateusz\desktop\code_blocks\21_ks_oop\ksiazka_adresowa\ksiazkaadresowa.h
 	<iostream>
 	"UzytkownikMenager.h"
 
@@ -32,7 +32,7 @@
 	<iostream>
 	"Uzytkownik.h"
 
-1681729556 c:\users\mateusz\desktop\code_blocks\21_ks_oop\ksiazka_adresowa\uzytkownikmenager.h
+1681747995 c:\users\mateusz\desktop\code_blocks\21_ks_oop\ksiazka_adresowa\uzytkownikmenager.h
 	<iostream>
 	<vector>
 	"Uzytkownik.h"
@@ -51,21 +51,21 @@
 	<fstream>
 	<sstream>
 
-1681718125 c:\users\mateusz\desktop\code_blocks\21_ks_oop\ksiazka_adresowa\plikzuzytkownikami.h
+1681744016 c:\users\mateusz\desktop\code_blocks\21_ks_oop\ksiazka_adresowa\plikzuzytkownikami.h
 	<iostream>
 	<vector>
 	"Uzytkownik.h"
 	<fstream>
 	<sstream>
 
-1681718125 source:c:\users\mateusz\desktop\code_blocks\21_ks_oop\ksiazka_adresowa\plikzuzytkownikami.cpp
+1681744016 source:c:\users\mateusz\desktop\code_blocks\21_ks_oop\ksiazka_adresowa\plikzuzytkownikami.cpp
 	"PlikZUzytkownikami.h"
 	"MetodyPomocnicze.h"
 
-1681729579 source:c:\users\mateusz\desktop\code_blocks\21_ks_oop\ksiazka_adresowa\uzytkownikmenager.cpp
+1681748080 source:c:\users\mateusz\desktop\code_blocks\21_ks_oop\ksiazka_adresowa\uzytkownikmenager.cpp
 	"UzytkownikMenager.h"
 
-1681727898 source:c:\users\mateusz\desktop\code_blocks\21_ks_oop\ksiazka_adresowa\ksiazkaadresowa.cpp
+1681744978 source:c:\users\mateusz\desktop\code_blocks\21_ks_oop\ksiazka_adresowa\ksiazkaadresowa.cpp
 	"ksiazkaAdresowa.h"
 	"UzytkownikMenager.h"
 

@@ -68,7 +68,7 @@ void UzytkownikMenager::wczytajUzytkownikowZPliku()
     uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
 }
 
-int UzytkownikMenager::logowanieUzytkownika()
+void UzytkownikMenager::logowanieUzytkownika()
 {
     Uzytkownik uzytkownik;
     string login = "", haslo = "";
@@ -90,18 +90,23 @@ int UzytkownikMenager::logowanieUzytkownika()
                 {
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
-                    return itr -> pobierzId();
+                    ustawIdZalogowanegoUzytkownika(itr -> pobierzId());
+                    return;
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
             system("pause");
-            return 0;
+            return;
         }
         itr++;
     }
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
     system("pause");
-    return 0;
+}
+
+void UzytkownikMenager::ustawIdZalogowanegoUzytkownika(int aktualneId)
+{
+    idZalogowanegoUzytkownika = aktualneId;
 }
 
 string UzytkownikMenager::wczytajLinie()
@@ -110,5 +115,25 @@ string UzytkownikMenager::wczytajLinie()
     getline(cin, wejscie);
     return wejscie;
 }
+
+void UzytkownikMenager::zmianaHaslaZalogowanegoUzytkownika()
+{
+    string noweHaslo = "";
+    cout << "Podaj nowe haslo: ";
+    noweHaslo = wczytajLinie();
+
+    for (vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); itr++)
+    {
+        if (itr -> pobierzId() == idZalogowanegoUzytkownika)
+        {
+            itr -> ustawHaslo(noweHaslo);
+            cout << "Haslo zostalo zmienione." << endl << endl;
+            system("pause");
+        }
+    }
+    plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
+}
+
+
 
 

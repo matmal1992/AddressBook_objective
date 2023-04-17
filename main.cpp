@@ -11,6 +11,7 @@ int main()
     //ksiazkaAdresowa.rejestracjaUzytkownika();
     //ksiazkaAdresowa.wczytajUzytkownikowZPliku();
     ksiazkaAdresowa.logowanieUzytkownika();
+    ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
 
 

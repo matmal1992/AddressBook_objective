@@ -22,6 +22,8 @@ public:
     vector <Uzytkownik> wczytajUzytkownikowZPliku();
     Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
     PlikZUzytkownikami(string nazwaPliku) : nazwaPlikuZUzytkownikami(nazwaPliku){};
+    void zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> uzytkownicy);
+
 
 
 };

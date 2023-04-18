@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>342</x>
-      <y>9</y>
+      <x>279</x>
+      <y>18</y>
       <w>351</w>
       <h>333</h>
     </coordinates>
@@ -16,7 +16,10 @@
 -
 + KsiazkaAdresowa()
 + rejestracjaUzytkownika() : void
++ logowanieUzytkownika() : int
 + wypiszWszystkichUzytkownikow() : void
++ zmianaHaslaZalogowanegoUzytkownika() : void
++ wylogujUzytkownika() : void
 
 
 
@@ -26,9 +29,9 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>153</y>
-      <w>90</w>
+      <x>18</x>
+      <y>18</y>
+      <w>216</w>
       <h>180</h>
     </coordinates>
     <panel_attributes>Uzytkownik
@@ -37,29 +40,44 @@
 - id: int
 - login: string
 - haslo: string
-</panel_attributes>
+-
++ ustawId(int noweId) : void
++ ustawLogin(int nowyLogin) : void
++ ustawHaslo(int noweHaslo) : void
++ pobierzId() : int
++ pobierzLogin() : string
++ pobierzHaslo() : string</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>207</x>
-      <y>162</y>
-      <w>90</w>
-      <h>108</h>
+      <x>414</x>
+      <y>423</y>
+      <w>171</w>
+      <h>189</h>
     </coordinates>
     <panel_attributes>Adresat
 -
 -
+- id : int
+- imie : string
+- nazwisko : string
+- adres : string
+- email : string
+- telefon : string
+-
+
+
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>720</x>
-      <y>90</y>
-      <w>261</w>
+      <x>648</x>
+      <y>9</y>
+      <w>279</w>
       <h>225</h>
     </coordinates>
     <panel_attributes>UzytkownikMenager
@@ -71,8 +89,10 @@
 -
 + rejestracjaUzytkownika() : void
 + logowanieUzytkownika() : int
++ zmianaHaslaZalogowanegoUzytkownika(int idZalogowanegoUzytkownika) : void
 + wypiszWszystkichUzytkownikow() : void
 + wczytajUzytkownikowZPliku() : void
++ wylogujUzytkownika() : void
 - podajDaneNowegoUzytkownika() : Uzytkownik 
 - pobierzIdNowegoUzytkownika() : int
 - czyIstniejeLogin(string login) : bool
@@ -82,7 +102,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>450</x>
+      <x>18</x>
       <y>423</y>
       <w>360</w>
       <h>189</h>
@@ -98,16 +118,17 @@
 - zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik) : string
 + PlikZUzytkownikami()
 + wczytajUzytkownikowZPliku() : vector &lt;Uzytkownicy&gt;
-+ dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik) : void</panel_attributes>
++ dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik) : void
++ zapiszWszystkichUzytkownikowDoPliku() : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>117</x>
-      <y>423</y>
-      <w>288</w>
-      <h>243</h>
+      <x>18</x>
+      <y>252</y>
+      <w>243</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>MetodyPomocnicze
 -

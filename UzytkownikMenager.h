@@ -4,6 +4,7 @@
 #include <vector>
 #include "Uzytkownik.h"
 #include "PlikZUzytkownikami.h"
+#include "MetodyPomocnicze.h"
 #include <fstream>
 #include <sstream>
 
@@ -27,9 +28,14 @@ private:
 public:
     UzytkownikMenager(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami) {};
     void rejestracjaUzytkownika();
-    int logowanieUzytkownika();
+    void logowanieUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
+    string wczytajLinie();
+    void zmianaHaslaZalogowanegoUzytkownika();
+    void zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> uzytkownicy);
+    void ustawIdZalogowanegoUzytkownika(int aktualneId);
+    void wylogujUzytkownika();
 };
 
 #endif

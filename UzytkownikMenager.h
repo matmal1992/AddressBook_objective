@@ -35,6 +35,7 @@ public:
     void zmianaHaslaZalogowanegoUzytkownika();
     void zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> uzytkownicy);
     void ustawIdZalogowanegoUzytkownika(int aktualneId);
+    void wylogujUzytkownika();
 };
 
 #endif

@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>414</x>
-      <y>0</y>
+      <x>279</x>
+      <y>18</y>
       <w>351</w>
       <h>333</h>
     </coordinates>
@@ -18,6 +18,8 @@
 + rejestracjaUzytkownika() : void
 + logowanieUzytkownika() : int
 + wypiszWszystkichUzytkownikow() : void
++ zmianaHaslaZalogowanegoUzytkownika() : void
++ wylogujUzytkownika() : void
 
 
 
@@ -27,8 +29,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>180</x>
-      <y>36</y>
+      <x>18</x>
+      <y>18</y>
       <w>216</w>
       <h>180</h>
     </coordinates>
@@ -50,22 +52,31 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>963</x>
+      <x>414</x>
       <y>423</y>
-      <w>90</w>
-      <h>108</h>
+      <w>171</w>
+      <h>189</h>
     </coordinates>
     <panel_attributes>Adresat
 -
 -
+- id : int
+- imie : string
+- nazwisko : string
+- adres : string
+- email : string
+- telefon : string
+-
+
+
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>792</x>
-      <y>99</y>
+      <x>648</x>
+      <y>9</y>
       <w>279</w>
       <h>225</h>
     </coordinates>
@@ -78,8 +89,10 @@
 -
 + rejestracjaUzytkownika() : void
 + logowanieUzytkownika() : int
++ zmianaHaslaZalogowanegoUzytkownika(int idZalogowanegoUzytkownika) : void
 + wypiszWszystkichUzytkownikow() : void
 + wczytajUzytkownikowZPliku() : void
++ wylogujUzytkownika() : void
 - podajDaneNowegoUzytkownika() : Uzytkownik 
 - pobierzIdNowegoUzytkownika() : int
 - czyIstniejeLogin(string login) : bool
@@ -89,8 +102,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>513</x>
-      <y>369</y>
+      <x>18</x>
+      <y>423</y>
       <w>360</w>
       <h>189</h>
     </coordinates>
@@ -105,15 +118,16 @@
 - zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik) : string
 + PlikZUzytkownikami()
 + wczytajUzytkownikowZPliku() : vector &lt;Uzytkownicy&gt;
-+ dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik) : void</panel_attributes>
++ dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik) : void
++ zapiszWszystkichUzytkownikowDoPliku() : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>189</x>
-      <y>369</y>
-      <w>288</w>
+      <x>18</x>
+      <y>252</y>
+      <w>243</w>
       <h>135</h>
     </coordinates>
     <panel_attributes>MetodyPomocnicze

@@ -20,7 +20,6 @@ class Uzytkownik
         int pobierzId();
         string pobierzLogin();
         string pobierzHaslo();
-
 };
 
 #endif

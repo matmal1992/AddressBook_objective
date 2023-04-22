@@ -4,10 +4,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>279</x>
-      <y>18</y>
+      <x>369</x>
+      <y>9</y>
       <w>351</w>
-      <h>333</h>
+      <h>180</h>
     </coordinates>
     <panel_attributes>KsiazkaAdresowa
 -
@@ -20,6 +20,7 @@
 + wypiszWszystkichUzytkownikow() : void
 + zmianaHaslaZalogowanegoUzytkownika() : void
 + wylogujUzytkownika() : void
++ wybierzOpcjeZMenuGlownego() :
 
 
 
@@ -29,8 +30,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>18</x>
-      <y>18</y>
+      <x>9</x>
+      <y>9</y>
       <w>216</w>
       <h>180</h>
     </coordinates>
@@ -52,8 +53,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>414</x>
-      <y>423</y>
+      <x>837</x>
+      <y>9</y>
       <w>171</w>
       <h>189</h>
     </coordinates>
@@ -75,8 +76,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>648</x>
-      <y>9</y>
+      <x>9</x>
+      <y>207</y>
       <w>279</w>
       <h>225</h>
     </coordinates>
@@ -102,31 +103,31 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>18</x>
-      <y>423</y>
+      <x>9</x>
+      <y>441</y>
       <w>360</w>
       <h>189</h>
     </coordinates>
     <panel_attributes>PlikZUzytkownikami
 -
 -
-- nazwaPlikuZUzytkownikami : string
-- plikTekstowy : fstream
+- nazwaPlikuZUzytkownikami : const string
 -
  
 - czyPlikJestPusty() : bool
 - zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik) : string
-+ PlikZUzytkownikami()
++ pobierzDaneUzytkownika(string daneOddzieloneKreskami) : Uzytkownik)
 + wczytajUzytkownikowZPliku() : vector &lt;Uzytkownicy&gt;
 + dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik) : void
-+ zapiszWszystkichUzytkownikowDoPliku() : void</panel_attributes>
++ zapiszWszystkichUzytkownikowDoPliku() : void
++ PlikZUzytkownikami(string nazwaPliku)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>18</x>
-      <y>252</y>
+      <x>396</x>
+      <y>207</y>
       <w>243</w>
       <h>135</h>
     </coordinates>
@@ -134,6 +135,41 @@
 -
 -
 + konwerjsaIntNaString(int liczba) : string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>738</x>
+      <y>207</y>
+      <w>270</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>AdresatManager
+-
+-
+- adresaci : vector &lt;Adresat&gt;
+- plikZAdresatami : PlikZAdresatami
+-
++ dodajAdresata() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>765</x>
+      <y>405</y>
+      <w>225</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>PlikZAdresatami
+-
+-
+- nazwaPlikuZAdresatami : string
+- plikTekstowy : fstream
+-
+
 </panel_attributes>
     <additional_attributes/>
   </element>

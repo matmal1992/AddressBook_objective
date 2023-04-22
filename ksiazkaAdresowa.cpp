@@ -15,7 +15,14 @@ int KsiazkaAdresowa::logowanieUzytkownika()
 {
     uzytkownikMenager.logowanieUzytkownika();
 }
+
 void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
 {
     uzytkownikMenager.zmianaHaslaZalogowanegoUzytkownika();
 }
+
+void KsiazkaAdresowa::dodajAdresata()
+{
+    adresatMenager.dodajAdresata();
+}
+

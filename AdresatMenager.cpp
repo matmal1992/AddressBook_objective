@@ -1,13 +1,13 @@
 #include "AdresatMenager.h"
 #include "UzytkownikMenager.h"
 
-void AdresatMenager::dodajAdresata()
+void AdresatMenager::dodajAdresata(int idZalogowanegoUzytkownika)
 {
     Adresat adresat;
 
     system("cls");
     cout << " >>> DODAWANIE NOWEGO ADRESATA <<<" << endl << endl;
-    adresat = podajDaneNowegoAdresata(idOstatniegoAdresata);
+    adresat = podajDaneNowegoAdresata(idOstatniegoAdresata, idZalogowanegoUzytkownika);
 
     adresaci.push_back(adresat);
     plikZAdresatami.dopiszAdresataDoPliku(adresat);
@@ -20,12 +20,12 @@ void AdresatMenager::ustawIdOstatniegoAdresata(int aktualneId)
     idOstatniegoAdresata ++;
 }*/
 
-Adresat AdresatMenager::podajDaneNowegoAdresata(int idOstatniegoAdresata)
+Adresat AdresatMenager::podajDaneNowegoAdresata(int idOstatniegoAdresata, int idZalogowanegoUzytkownika)
 {
     Adresat adresat;
 
     adresat.ustawId(++idOstatniegoAdresata);
-    adresat.ustawIdZalogowanegoUzytkownika();
+    adresat.ustawIdZalogowanegoUzytkownika(idZalogowanegoUzytkownika);
 
     cout << "Podaj imie: ";
     adresat.ustawImie(MetodyPomocnicze::wczytajLinie());

@@ -23,6 +23,6 @@ void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
 
 void KsiazkaAdresowa::dodajAdresata()
 {
-    adresatMenager.dodajAdresata();
+    adresatMenager.dodajAdresata(uzytkownikMenager.pobierzIdZalogowanegoUzytkownika());
 }
 

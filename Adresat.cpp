@@ -1,7 +1,7 @@
 #include "Adresat.h"
 
 void Adresat::ustawId(int noweId) {id = noweId;}
-void Adresat::ustawIdZalogowanegoUzytkownika() {idUzytkownika = 8;}
+void Adresat::ustawIdZalogowanegoUzytkownika(int idZalogowanegoUzytkownika) {idUzytkownika = idZalogowanegoUzytkownika;}
 void Adresat::ustawImie(string noweImie) {imie = noweImie;}
 void Adresat::ustawNazwisko(string noweNazwisko) {nazwisko = noweNazwisko;}
 void Adresat::ustawAdres(string nowyAdres) {adres = nowyAdres;}
@@ -15,3 +15,5 @@ string Adresat::pobierzNazwisko() {return nazwisko;}
 string Adresat::pobierzAdres() {return adres;}
 string Adresat::pobierzEmail() {return email;}
 string Adresat::pobierzTelefon() {return telefon;}
+
+

@@ -1,7 +1,7 @@
 #ifndef ADRESAT_H
 #define ADRESAT_H
-#include "UzytkownikMenager.h"
-#include "Uzytkownik.h"
+//#include "UzytkownikMenager.h"
+//#include "Uzytkownik.h"
 
 #include <iostream>
 
@@ -19,7 +19,7 @@ class Adresat
         string telefon{};
 
     public:
-        void ustawIdZalogowanegoUzytkownika();
+        void ustawIdZalogowanegoUzytkownika(int idZalogowanegoUzytkownika);
         void ustawId(int noweId);
         void ustawImie(string noweImie);
         void ustawNazwisko(string noweNazwisko);

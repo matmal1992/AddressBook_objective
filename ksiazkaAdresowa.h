@@ -14,7 +14,6 @@ class KsiazkaAdresowa
         UzytkownikMenager uzytkownikMenager;
         AdresatMenager adresatMenager;
 
-
     public:
         KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami) : uzytkownikMenager(nazwaPlikuZUzytkownikami), adresatMenager(nazwaPlikuZAdresatami)
         {

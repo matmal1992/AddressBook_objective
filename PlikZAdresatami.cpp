@@ -108,7 +108,7 @@ Adresat PlikZAdresatami::pobierzDaneAdresata(string daneAdresataOddzielonePionow
                 adresat.ustawId(atoi(pojedynczaDanaAdresata.c_str()));
                 break;
             case 2:
-                adresat.ustawIdZalogowanegoUzytkownika();
+                adresat.ustawIdZalogowanegoUzytkownika(atoi(pojedynczaDanaAdresata.c_str()));
                 break;
             case 3:
                 adresat.ustawImie(pojedynczaDanaAdresata);

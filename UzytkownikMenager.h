@@ -4,6 +4,7 @@
 #include "Uzytkownik.h"
 #include "PlikZUzytkownikami.h"
 #include "MetodyPomocnicze.h"
+#include "AdresatMenager.h"
 
 #include <iostream>
 #include <vector>

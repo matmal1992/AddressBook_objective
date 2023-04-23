@@ -43,9 +43,6 @@ class KsiazkaAdresowa
                     }
                 }
             }
-
-
-
         }
 
         void rejestracjaUzytkownika();

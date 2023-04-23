@@ -29,7 +29,7 @@ void KsiazkaAdresowa::logowanieUzytkownika()
             //wyszukajAdresatowPoNazwisku(adresaci);
             break;
         case '4':
-            //wyswietlWszystkichAdresatow(adresaci);
+            adresatMenager.wyswietlWszystkichAdresatow();
             break;
         case '5':
             //idUsunietegoAdresata = usunAdresata(adresaci);

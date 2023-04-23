@@ -10,10 +10,10 @@ int main()
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
     //ksiazkaAdresowa.rejestracjaUzytkownika();
     //ksiazkaAdresowa.wczytajUzytkownikowZPliku();
-    ksiazkaAdresowa.logowanieUzytkownika();
-    ksiazkaAdresowa.dodajAdresata();
+    //ksiazkaAdresowa.logowanieUzytkownika();
+    //ksiazkaAdresowa.dodajAdresata();
     //ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
-    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
+    //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
 
 
     return 0;

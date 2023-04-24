@@ -16,20 +16,24 @@ using namespace std;
 class AdresatMenager
 {
 private:
-    int idOstatniegoAdresata{};
+    int idOstatniegoAdresata;
 
-    vector <Adresat> adresaci{};
+    vector <Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;
-    int idZalogowanegoUzytkownika{};
+    int idZalogowanegoUzytkownika;
 
 public:
     AdresatMenager();
-    AdresatMenager(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami) {};
+    AdresatMenager(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami){};
+
     void dodajAdresata(int idZalogowanegoUzytkownika);
     void wyswietlWszystkichAdresatow();
-    void ustawIdOstatniegoAdresata();
+    void ustawIdOstatniegoAdresata(int aktualneId);
     Adresat podajDaneNowegoAdresata(int idOstatniegoAdresata, int idZalogowanegoUzytkownika);
     void wyswietlDaneAdresata(Adresat adresat);
+    void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
+    Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
+    int pobierzIdOstatniegoAdresata();
 
 };
 

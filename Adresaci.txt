@@ -1,9 +1,9 @@
 
 1|2|M|M|m|m|m|
-1|5|B|B|b|b|b|
-1|0|Y|Y|y|y|y|
-1|0|Q|Q|q|q|q|
-1|2|W|W|w|w|w|
-1|3|Cname|Csurname|cdcd|cdcd|cdcd|
-1|2|Zx|Zx|zx|zx|zx|
-1|2|Kj|Kj|kj|kj|kj|
+2|5|B|B|b|b|b|
+3|0|Y|Y|y|y|y|
+4|0|Q|Q|q|q|q|
+5|2|W|W|w|w|w|
+6|3|Cname|Csurname|cdcd|cdcd|cdcd|
+7|2|Zx|Zx|zx|zx|zx|
+8|2|Hj|Hj|hj|hj|hj|

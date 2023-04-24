@@ -21,6 +21,9 @@ public:
     static char wybierzOpcjeZMenuUzytkownika();
     static char wybierzOpcjeZMenuGlownego();
     static char wczytajZnak();
+    static int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
+    static int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
+    static string pobierzLiczbe(string tekst, int pozycjaZnaku);
 };
 
 #endif

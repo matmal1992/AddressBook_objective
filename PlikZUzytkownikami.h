@@ -17,14 +17,11 @@ private:
     string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
 
 public:
+    PlikZUzytkownikami(string nazwaPliku) : nazwaPlikuZUzytkownikami(nazwaPliku){};
     void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
     vector <Uzytkownik> wczytajUzytkownikowZPliku();
     Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
-    PlikZUzytkownikami(string nazwaPliku) : nazwaPlikuZUzytkownikami(nazwaPliku){};
     void zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> uzytkownicy);
-
-
-
 };
 
 #endif

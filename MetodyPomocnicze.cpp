@@ -17,7 +17,6 @@ int MetodyPomocnicze::konwersjaStringNaInt(string liczba)
     return liczbaInt;
 }
 
-
 string MetodyPomocnicze::wczytajLinie()
 {
     string wejscie = "";

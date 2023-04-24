@@ -1,7 +1,5 @@
 #ifndef ADRESAT_H
 #define ADRESAT_H
-//#include "UzytkownikMenager.h"
-//#include "Uzytkownik.h"
 
 #include <iostream>
 

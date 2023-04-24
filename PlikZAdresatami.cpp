@@ -133,14 +133,6 @@ Adresat PlikZAdresatami::pobierzDaneAdresata(string daneAdresataOddzielonePionow
     return adresat;
 }
 
-
-
-
-
-
-
-
-
 string PlikZAdresatami::pobierzNazwePlikuZAdresatami()
 {
     return nazwaPlikuZAdresatami;

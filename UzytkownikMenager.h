@@ -26,7 +26,6 @@ private:
 
 
 public:
-
     UzytkownikMenager(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami) {};
     void rejestracjaUzytkownika();
     void logowanieUzytkownika();

@@ -1,8 +1,6 @@
 #ifndef METODYPOMOCNICZE_H
 #define METODYPOMOCNICZE_H
 
-#include "Uzytkownik.h"
-
 #include <iostream>
 #include <vector>
 #include <fstream>

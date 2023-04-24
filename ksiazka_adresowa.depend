@@ -105,10 +105,10 @@
 1682194170 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresat.cpp
 	"Adresat.h"
 
-1682194170 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresat.h
+1682326610 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresat.h
 	<iostream>
 
-1682191808 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\uzytkownikmenager.h
+1682326279 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\uzytkownikmenager.h
 	"Uzytkownik.h"
 	"PlikZUzytkownikami.h"
 	"MetodyPomocnicze.h"
@@ -121,26 +121,25 @@
 1682156065 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\uzytkownik.h
 	<iostream>
 
-1681812124 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\plikzuzytkownikami.h
+1682326610 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\plikzuzytkownikami.h
 	<iostream>
 	<vector>
 	"Uzytkownik.h"
 	<fstream>
 	<sstream>
 
-1682280848 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\metodypomocnicze.h
-	"Uzytkownik.h"
+1682326753 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\metodypomocnicze.h
 	<iostream>
 	<vector>
 	<fstream>
 	<sstream>
 	<algorithm>
 
-1682322330 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresatmenager.cpp
+1682326610 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresatmenager.cpp
 	"AdresatMenager.h"
 	"UzytkownikMenager.h"
 
-1682322551 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresatmenager.h
+1682326610 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresatmenager.h
 	<iostream>
 	<vector>
 	<fstream>
@@ -149,7 +148,7 @@
 	"PlikZAdresatami.h"
 	"MetodyPomocnicze.h"
 
-1682281139 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\plikzadresatami.h
+1682326610 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\plikzadresatami.h
 	"Adresat.h"
 	<iostream>
 	<vector>
@@ -160,12 +159,12 @@
 	"ksiazkaAdresowa.h"
 	"UzytkownikMenager.h"
 
-1682279475 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\ksiazkaadresowa.h
+1682326279 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\ksiazkaadresowa.h
 	<iostream>
 	"UzytkownikMenager.h"
 	"AdresatMenager.h"
 
-1682265967 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\main.cpp
+1682325928 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\main.cpp
 	<iostream>
 	<vector>
 	"ksiazkaAdresowa.h"
@@ -173,11 +172,11 @@
 1682280818 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\metodypomocnicze.cpp
 	"MetodyPomocnicze.h"
 
-1682281139 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\plikzadresatami.cpp
+1682326610 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\plikzadresatami.cpp
 	"PlikZAdresatami.h"
 	"MetodyPomocnicze.h"
 
-1681807406 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\plikzuzytkownikami.cpp
+1682326610 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\plikzuzytkownikami.cpp
 	"PlikZUzytkownikami.h"
 	"MetodyPomocnicze.h"
 
@@ -185,6 +184,6 @@
 	<iostream>
 	"Uzytkownik.h"
 
-1682322551 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\uzytkownikmenager.cpp
+1682326279 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\uzytkownikmenager.cpp
 	"UzytkownikMenager.h"
 

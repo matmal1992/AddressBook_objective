@@ -20,7 +20,6 @@ void AdresatMenager::ustawIdOstatniegoAdresata(int aktualneId)
     idOstatniegoAdresata = aktualneId;
 }
 
-
 Adresat AdresatMenager::podajDaneNowegoAdresata(int idOstatniegoAdresata, int idZalogowanegoUzytkownika)
 {
     Adresat adresat;

@@ -10,14 +10,12 @@
 #include "PlikZAdresatami.h"
 #include "MetodyPomocnicze.h"
 
-
 using namespace std;
 
 class AdresatMenager
 {
 private:
     int idOstatniegoAdresata;
-
     vector <Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;
     int idZalogowanegoUzytkownika;

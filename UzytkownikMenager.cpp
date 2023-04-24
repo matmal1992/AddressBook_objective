@@ -109,6 +109,16 @@ void UzytkownikMenager::ustawIdZalogowanegoUzytkownika(int aktualneId)
     idZalogowanegoUzytkownika = aktualneId;
 }
 
+void UzytkownikMenager::wylogujUzytkownika()
+{
+    idZalogowanegoUzytkownika = 0;
+}
+
+int UzytkownikMenager::pobierzIdZalogowanegoUzytkownika()
+{
+    return idZalogowanegoUzytkownika;
+}
+
 void UzytkownikMenager::zmianaHaslaZalogowanegoUzytkownika()
 {
     string noweHaslo = "";
@@ -126,18 +136,4 @@ void UzytkownikMenager::zmianaHaslaZalogowanegoUzytkownika()
     }
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }
-
-void UzytkownikMenager::wylogujUzytkownika()
-{
-    idZalogowanegoUzytkownika = 0;
-
-}
-
-int UzytkownikMenager::pobierzIdZalogowanegoUzytkownika()
-{
-    return idZalogowanegoUzytkownika;
-}
-
-
-
 

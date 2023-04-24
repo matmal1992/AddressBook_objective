@@ -2,10 +2,8 @@
 #define KSIAZKAADRESOWA_H
 
 #include <iostream>
-
 #include "UzytkownikMenager.h"
 #include "AdresatMenager.h"
-//#include "MetodyPomocnicze.h"
 
 using namespace std;
 
@@ -15,9 +13,9 @@ class KsiazkaAdresowa
         UzytkownikMenager uzytkownikMenager;
         AdresatMenager adresatMenager;
 
-
     public:
-        KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami) : uzytkownikMenager(nazwaPlikuZUzytkownikami), adresatMenager(nazwaPlikuZAdresatami)
+        KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami)
+        : uzytkownikMenager(nazwaPlikuZUzytkownikami), adresatMenager(nazwaPlikuZAdresatami)
         {
             uzytkownikMenager.wczytajUzytkownikowZPliku();
 
@@ -27,15 +25,9 @@ class KsiazkaAdresowa
                 {
                     switch (wybierzOpcjeZMenuGlownego())
                     {
-                    case '1':
-                        rejestracjaUzytkownika();
-                        break;
-                    case '2':
-                        logowanieUzytkownika();
-                        break;
-                    case '9':
-                        exit(0);
-                        break;
+                    case '1': rejestracjaUzytkownika(); break;
+                    case '2': logowanieUzytkownika(); break;
+                    case '9': exit(0); break;
                     default:
                         cout << endl << "Nie ma takiej opcji w menu." << endl << endl;
                         system("pause");

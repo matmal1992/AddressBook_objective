@@ -14,7 +14,6 @@ class PlikZAdresatami
 {
 private:
     const string nazwaPlikuZAdresatami;
-
     bool czyPlikJestPusty();
 
 public:
@@ -22,9 +21,7 @@ public:
     void dopiszAdresataDoPliku(Adresat adresat);
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
     int wczytajAdresatowZalogowanegoUzytkownikaZPliku(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika);
-
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
-
     string pobierzNazwePlikuZAdresatami();
 };
 

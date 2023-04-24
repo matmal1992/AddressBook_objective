@@ -55,14 +55,6 @@ bool UzytkownikMenager::czyIstniejeLogin(string login)
     return false;
 }
 
-void UzytkownikMenager::wypiszWszystkichUzytkownikow()
-{
-    cout << "Lista uzytkownikow: " << endl;
-
-    for(auto c: uzytkownicy)
-        cout << c.pobierzLogin() << " | " << c.pobierzHaslo() <<  endl;
-}
-
 void UzytkownikMenager::wczytajUzytkownikowZPliku()
 {
     uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();

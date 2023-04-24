@@ -38,7 +38,6 @@ class KsiazkaAdresowa
         }
 
         void rejestracjaUzytkownika();
-        void wypiszWszystkichUzytkownikow();
         void logowanieUzytkownika();
         void zmianaHaslaZalogowanegoUzytkownika();
         void dodajAdresata();

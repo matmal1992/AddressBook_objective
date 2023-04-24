@@ -1,11 +1,12 @@
-#include <iostream>
-#include <vector>
-#include "Uzytkownik.h"
-#include <fstream>
-#include <sstream>
-
 #ifndef PLIKZUZYTKOWNIKAMI_H
 #define PLIKZUZYTKOWNIKAMI_H
+
+#include "MetodyPomocnicze.h"
+#include "Uzytkownik.h"
+#include <iostream>
+#include <vector>
+#include <fstream>
+#include <sstream>
 
 using namespace std;
 

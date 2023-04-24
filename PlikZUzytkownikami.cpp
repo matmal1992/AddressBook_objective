@@ -1,5 +1,4 @@
 #include "PlikZUzytkownikami.h"
-#include "MetodyPomocnicze.h"
 
 bool PlikZUzytkownikami::czyPlikJestPusty()
 {

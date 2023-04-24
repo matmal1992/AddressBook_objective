@@ -1,11 +1,7 @@
 #ifndef UZYTKOWNIKMENAGER_H
 #define UZYTKOWNIKMENAGER_H
 
-#include "Uzytkownik.h"
 #include "PlikZUzytkownikami.h"
-#include "MetodyPomocnicze.h"
-#include "AdresatMenager.h"
-
 #include <iostream>
 #include <vector>
 #include <fstream>
@@ -29,7 +25,6 @@ public:
     UzytkownikMenager(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami) {};
     void rejestracjaUzytkownika();
     void logowanieUzytkownika();
-    void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
     void zmianaHaslaZalogowanegoUzytkownika();
     void zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> uzytkownicy);

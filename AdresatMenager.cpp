@@ -1,5 +1,4 @@
 #include "AdresatMenager.h"
-#include "UzytkownikMenager.h"
 
 void AdresatMenager::dodajAdresata(int idZalogowanegoUzytkownika)
 {

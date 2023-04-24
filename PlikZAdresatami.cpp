@@ -1,5 +1,4 @@
 #include "PlikZAdresatami.h"
-#include "MetodyPomocnicze.h"
 
 bool PlikZAdresatami::czyPlikJestPusty()
 {

@@ -2,7 +2,7 @@
 #define PLIKZADRESATAMI_H
 
 #include "Adresat.h"
-
+#include "MetodyPomocnicze.h"
 #include <iostream>
 #include <vector>
 #include <fstream>

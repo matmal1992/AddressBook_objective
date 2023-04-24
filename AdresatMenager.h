@@ -34,7 +34,7 @@ public:
     void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
     int pobierzIdOstatniegoAdresata();
-
+    void wylogujUzytkownika();
 };
 
 #endif

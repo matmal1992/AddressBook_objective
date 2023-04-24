@@ -107,13 +107,8 @@ void AdresatMenager::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogow
     if (daneOstaniegoAdresataWPliku != "")
     {
         idOstatniegoAdresata = MetodyPomocnicze::pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneOstaniegoAdresataWPliku);
-
         ustawIdOstatniegoAdresata(idOstatniegoAdresata);
-        cout << "idOstatniegoAdresata: " << pobierzIdOstatniegoAdresata() << endl;
-    system("pause");
     }
-   // else
-     //   return 0;
 }
 
 Adresat AdresatMenager::pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami)
@@ -164,5 +159,10 @@ Adresat AdresatMenager::pobierzDaneAdresata(string daneAdresataOddzielonePionowy
 int AdresatMenager::pobierzIdOstatniegoAdresata()
 {
     return idOstatniegoAdresata;
+}
+
+void AdresatMenager::wylogujUzytkownika()
+{
+    adresaci.clear();
 }
 

@@ -44,6 +44,7 @@ void KsiazkaAdresowa::logowanieUzytkownika()
             break;
         case '8':
             uzytkownikMenager.wylogujUzytkownika();
+            adresatMenager.wylogujUzytkownika();
             break;
         default:
             cout << "Wprowadzono bledne dane!" << endl;

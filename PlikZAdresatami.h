@@ -12,7 +12,6 @@ using namespace std;
 
 class PlikZAdresatami
 {
-private:
     const string nazwaPlikuZAdresatami;
     bool czyPlikJestPusty();
 

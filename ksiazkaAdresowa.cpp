@@ -96,3 +96,23 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego()
 
     return wybor;
 }
+
+void KsiazkaAdresowa::wyswietlMenuGlowne()
+{
+    while (true)
+    {
+        if (uzytkownikMenager.pobierzIdZalogowanegoUzytkownika() == 0)
+        {
+            switch (wybierzOpcjeZMenuGlownego())
+            {
+            case '1': rejestracjaUzytkownika(); break;
+            case '2': logowanieUzytkownika(); break;
+            case '9': exit(0); break;
+            default:
+                cout << endl << "Nie ma takiej opcji w menu." << endl << endl;
+                system("pause");
+                break;
+            }
+        }
+    }
+}

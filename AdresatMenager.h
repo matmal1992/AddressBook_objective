@@ -11,7 +11,6 @@ using namespace std;
 
 class AdresatMenager
 {
-private:
     int idOstatniegoAdresata;
     vector <Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;

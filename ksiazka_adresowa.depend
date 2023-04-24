@@ -151,16 +151,16 @@
 	<fstream>
 	<sstream>
 
-1682327277 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\ksiazkaadresowa.cpp
+1682367148 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\ksiazkaadresowa.cpp
 	"ksiazkaAdresowa.h"
 	"UzytkownikMenager.h"
 
-1682366687 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\ksiazkaadresowa.h
+1682367922 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\ksiazkaadresowa.h
 	<iostream>
 	"UzytkownikMenager.h"
 	"AdresatMenager.h"
 
-1682325928 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\main.cpp
+1682367148 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\main.cpp
 	<iostream>
 	<vector>
 	"ksiazkaAdresowa.h"

@@ -10,41 +10,7 @@ void KsiazkaAdresowa::logowanieUzytkownika()
 {
     uzytkownikMenager.logowanieUzytkownika();
     adresatMenager.wczytajAdresatowZalogowanegoUzytkownikaZPliku(uzytkownikMenager.pobierzIdZalogowanegoUzytkownika());
-
-    while(uzytkownikMenager.pobierzIdZalogowanegoUzytkownika() != 0)
-    {
-        switch (wybierzOpcjeZMenuUzytkownika())
-        {
-        case '1':
-            dodajAdresata();
-            break;
-        case '2':
-            //wyszukajAdresatowPoImieniu(adresaci);
-            break;
-        case '3':
-            //wyszukajAdresatowPoNazwisku(adresaci);
-            break;
-        case '4':
-            adresatMenager.wyswietlWszystkichAdresatow();
-            break;
-        case '5':
-            //idUsunietegoAdresata = usunAdresata(adresaci);
-            //idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
-            break;
-        case '6':
-            //edytujAdresata(adresaci);
-            break;
-        case '7':
-            zmianaHaslaZalogowanegoUzytkownika();
-            break;
-        case '8':
-            uzytkownikMenager.wylogujUzytkownika();
-            adresatMenager.wylogujUzytkownika();
-            break;
-        default:
-            cout << "Wprowadzono bledne dane!" << endl;
-        }
-    }
+    wyswietlMenuUzytkownika();
 }
 
 void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
@@ -113,6 +79,44 @@ void KsiazkaAdresowa::wyswietlMenuGlowne()
                 system("pause");
                 break;
             }
+        }
+    }
+}
+
+void KsiazkaAdresowa::wyswietlMenuUzytkownika()
+{
+    while(uzytkownikMenager.pobierzIdZalogowanegoUzytkownika() != 0)
+    {
+        switch (wybierzOpcjeZMenuUzytkownika())
+        {
+        case '1':
+            dodajAdresata();
+            break;
+        case '2':
+            //wyszukajAdresatowPoImieniu(adresaci);
+            break;
+        case '3':
+            //wyszukajAdresatowPoNazwisku(adresaci);
+            break;
+        case '4':
+            adresatMenager.wyswietlWszystkichAdresatow();
+            break;
+        case '5':
+            //idUsunietegoAdresata = usunAdresata(adresaci);
+            //idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
+            break;
+        case '6':
+            //edytujAdresata(adresaci);
+            break;
+        case '7':
+            zmianaHaslaZalogowanegoUzytkownika();
+            break;
+        case '8':
+            uzytkownikMenager.wylogujUzytkownika();
+            adresatMenager.wylogujUzytkownika();
+            break;
+        default:
+            cout << "Wprowadzono bledne dane!" << endl;
         }
     }
 }

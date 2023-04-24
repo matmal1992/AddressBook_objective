@@ -12,7 +12,7 @@ class KsiazkaAdresowa
     UzytkownikMenager uzytkownikMenager;
     AdresatMenager adresatMenager;
 
-    public:
+public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami)
     : uzytkownikMenager(nazwaPlikuZUzytkownikami), adresatMenager(nazwaPlikuZAdresatami)
     {
@@ -26,6 +26,7 @@ class KsiazkaAdresowa
     char wybierzOpcjeZMenuUzytkownika();
     char wybierzOpcjeZMenuGlownego();
     void wyswietlMenuGlowne();
+    void wyswietlMenuUzytkownika();
 };
 
 #endif

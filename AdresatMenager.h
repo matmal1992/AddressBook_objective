@@ -20,15 +20,17 @@ public:
     AdresatMenager();
     AdresatMenager(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami){};
 
-    void dodajAdresata(int idZalogowanegoUzytkownika);
+    void dodajAdresata();
     void wyswietlWszystkichAdresatow();
-    void ustawIdOstatniegoAdresata(int aktualneId);
-    Adresat podajDaneNowegoAdresata(int idOstatniegoAdresata, int idZalogowanegoUzytkownika);
-    void wyswietlDaneAdresata(Adresat adresat);
-    void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
-    Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
-    int pobierzIdOstatniegoAdresata();
     void wylogujUzytkownika();
+    Adresat podajDaneNowegoAdresata();
+    Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
+    void wyswietlDaneAdresata(Adresat adresat);
+    void wczytajAdresatowZalogowanegoUzytkownikaZPliku();
+    int pobierzIdOstatniegoAdresata();
+    void ustawIdOstatniegoAdresata(int aktualneId);
+    void ustawIdZalogowanegoUzytkownika(int aktualneId);
+
 };
 
 #endif

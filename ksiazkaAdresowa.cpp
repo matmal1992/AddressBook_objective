@@ -9,7 +9,10 @@ void KsiazkaAdresowa::rejestracjaUzytkownika()
 void KsiazkaAdresowa::logowanieUzytkownika()
 {
     uzytkownikMenager.logowanieUzytkownika();
-    adresatMenager.wczytajAdresatowZalogowanegoUzytkownikaZPliku(uzytkownikMenager.pobierzIdZalogowanegoUzytkownika());
+
+    adresatMenager.ustawIdZalogowanegoUzytkownika(uzytkownikMenager.pobierzIdZalogowanegoUzytkownika());
+    adresatMenager.wczytajAdresatowZalogowanegoUzytkownikaZPliku();
+
     wyswietlMenuUzytkownika();
 }
 
@@ -20,7 +23,7 @@ void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
 
 void KsiazkaAdresowa::dodajAdresata()
 {
-    adresatMenager.dodajAdresata(uzytkownikMenager.pobierzIdZalogowanegoUzytkownika());
+    adresatMenager.dodajAdresata();
 }
 
 char KsiazkaAdresowa::wybierzOpcjeZMenuUzytkownika()

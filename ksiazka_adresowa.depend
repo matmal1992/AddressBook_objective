@@ -133,10 +133,10 @@
 	<sstream>
 	<algorithm>
 
-1682331750 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresatmenager.cpp
+1682409520 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresatmenager.cpp
 	"AdresatMenager.h"
 
-1682366687 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresatmenager.h
+1682409587 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresatmenager.h
 	<iostream>
 	<vector>
 	<fstream>
@@ -151,7 +151,7 @@
 	<fstream>
 	<sstream>
 
-1682367148 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\ksiazkaadresowa.cpp
+1682409048 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\ksiazkaadresowa.cpp
 	"ksiazkaAdresowa.h"
 	"UzytkownikMenager.h"
 

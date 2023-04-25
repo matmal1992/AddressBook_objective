@@ -1,12 +1,12 @@
 #include "AdresatMenager.h"
 
-void AdresatMenager::dodajAdresata(int idZalogowanegoUzytkownika)
+void AdresatMenager::dodajAdresata()
 {
     Adresat adresat;
 
     system("cls");
     cout << " >>> DODAWANIE NOWEGO ADRESATA <<<" << endl << endl;
-    adresat = podajDaneNowegoAdresata(idOstatniegoAdresata, idZalogowanegoUzytkownika);
+    adresat = podajDaneNowegoAdresata();
 
     adresaci.push_back(adresat);
     plikZAdresatami.dopiszAdresataDoPliku(adresat);
@@ -14,12 +14,7 @@ void AdresatMenager::dodajAdresata(int idZalogowanegoUzytkownika)
     idOstatniegoAdresata ++;
 }
 
-void AdresatMenager::ustawIdOstatniegoAdresata(int aktualneId)
-{
-    idOstatniegoAdresata = aktualneId;
-}
-
-Adresat AdresatMenager::podajDaneNowegoAdresata(int idOstatniegoAdresata, int idZalogowanegoUzytkownika)
+Adresat AdresatMenager::podajDaneNowegoAdresata()
 {
     Adresat adresat;
 
@@ -76,7 +71,7 @@ void AdresatMenager::wyswietlDaneAdresata(Adresat adresat)
     cout << "Adres:              " << adresat.pobierzAdres() << endl;
 }
 
-void AdresatMenager::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika)
+void AdresatMenager::wczytajAdresatowZalogowanegoUzytkownikaZPliku()
 {
     Adresat adresat;
     int idOstatniegoAdresata = 0;
@@ -163,4 +158,15 @@ void AdresatMenager::wylogujUzytkownika()
 {
     adresaci.clear();
 }
+
+void AdresatMenager::ustawIdZalogowanegoUzytkownika(int aktualneId)
+{
+    idZalogowanegoUzytkownika = aktualneId;
+}
+
+void AdresatMenager::ustawIdOstatniegoAdresata(int aktualneId)
+{
+    idOstatniegoAdresata = aktualneId;
+}
+
 

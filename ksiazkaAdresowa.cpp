@@ -10,10 +10,11 @@ void KsiazkaAdresowa::logowanieUzytkownika()
 {
     uzytkownikMenager.logowanieUzytkownika();
 
-    adresatMenager.ustawIdZalogowanegoUzytkownika(uzytkownikMenager.pobierzIdZalogowanegoUzytkownika());
-    adresatMenager.wczytajAdresatowZalogowanegoUzytkownikaZPliku();
-
-    wyswietlMenuUzytkownika();
+    if(uzytkownikMenager.czyUzytkownikJestZalogowany())
+    {
+        adresatMenager = new AdresatMenager(NAZWA_PLIKU_Z_ADRESATAMI, uzytkownikMenager.pobierzIdZalogowanegoUzytkownika());
+        wyswietlMenuUzytkownika();
+    }
 }
 
 void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
@@ -23,7 +24,7 @@ void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
 
 void KsiazkaAdresowa::dodajAdresata()
 {
-    adresatMenager.dodajAdresata();
+    adresatMenager->dodajAdresata();
 }
 
 char KsiazkaAdresowa::wybierzOpcjeZMenuUzytkownika()
@@ -102,7 +103,7 @@ void KsiazkaAdresowa::wyswietlMenuUzytkownika()
             //wyszukajAdresatowPoNazwisku(adresaci);
             break;
         case '4':
-            adresatMenager.wyswietlWszystkichAdresatow();
+            adresatMenager->wyswietlWszystkichAdresatow();
             break;
         case '5':
             //idUsunietegoAdresata = usunAdresata(adresaci);
@@ -116,7 +117,8 @@ void KsiazkaAdresowa::wyswietlMenuUzytkownika()
             break;
         case '8':
             uzytkownikMenager.wylogujUzytkownika();
-            adresatMenager.wylogujUzytkownika();
+            delete adresatMenager;
+            adresatMenager = NULL;
             break;
         default:
             cout << "Wprowadzono bledne dane!" << endl;

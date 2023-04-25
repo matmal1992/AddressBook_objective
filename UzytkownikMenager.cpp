@@ -55,11 +55,6 @@ bool UzytkownikMenager::czyIstniejeLogin(string login)
     return false;
 }
 
-void UzytkownikMenager::wczytajUzytkownikowZPliku()
-{
-    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
-}
-
 void UzytkownikMenager::logowanieUzytkownika()
 {
     Uzytkownik uzytkownik;
@@ -129,3 +124,10 @@ void UzytkownikMenager::zmianaHaslaZalogowanegoUzytkownika()
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }
 
+bool UzytkownikMenager::czyUzytkownikJestZalogowany()
+{
+    if(pobierzIdZalogowanegoUzytkownika() > 0)
+        return true;
+    else
+        return false;
+}

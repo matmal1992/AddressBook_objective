@@ -10,13 +10,20 @@ using namespace std;
 class KsiazkaAdresowa
 {
     UzytkownikMenager uzytkownikMenager;
-    AdresatMenager adresatMenager;
+    AdresatMenager *adresatMenager;
+    const string NAZWA_PLIKU_Z_ADRESATAMI;
 
 public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami)
-    : uzytkownikMenager(nazwaPlikuZUzytkownikami), adresatMenager(nazwaPlikuZAdresatami)
+    : uzytkownikMenager(nazwaPlikuZUzytkownikami), NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami)
     {
-        uzytkownikMenager.wczytajUzytkownikowZPliku();
+        adresatMenager = NULL;
+    }
+
+    ~KsiazkaAdresowa()
+    {
+        delete adresatMenager;
+        adresatMenager = NULL;
     }
 
     void rejestracjaUzytkownika();
@@ -27,6 +34,7 @@ public:
     char wybierzOpcjeZMenuGlownego();
     void wyswietlMenuGlowne();
     void wyswietlMenuUzytkownika();
+
 };
 
 #endif

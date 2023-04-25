@@ -10,8 +10,16 @@ void AdresatMenager::dodajAdresata()
     adresat = podajDaneNowegoAdresata();
 
     adresaci.push_back(adresat);
-    plikZAdresatami.dopiszAdresataDoPliku(adresat);
-    plikZAdresatami.ustawIdOstatniegoAdresata(idOstatniegoAdresata + 1);
+
+    if(plikZAdresatami.dopiszAdresataDoPliku(adresat))
+    {
+        plikZAdresatami.ustawIdOstatniegoAdresata(idOstatniegoAdresata + 1);
+    }
+    else
+    {
+        cout << "Nie udalo sie otworzyc pliku" << endl;
+        system("pause");
+    }
 }
 
 Adresat AdresatMenager::podajDaneNowegoAdresata()
@@ -19,7 +27,7 @@ Adresat AdresatMenager::podajDaneNowegoAdresata()
     Adresat adresat;
 
     adresat.ustawId(plikZAdresatami.pobierzIdOstatniegoAdresata() + 1);
-    adresat.ustawIdZalogowanegoUzytkownika(idZalogowanegoUzytkownika);
+    adresat.ustawIdZalogowanegoUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj imie: ";
     adresat.ustawImie(MetodyPomocnicze::wczytajLinie());
@@ -71,12 +79,6 @@ void AdresatMenager::wyswietlDaneAdresata(Adresat adresat)
     cout << "Adres:              " << adresat.pobierzAdres() << endl;
 }
 
-void AdresatMenager::wczytajAdresatowZalogowanegoUzytkownikaZPliku()
-{
-    plikZAdresatami.ustawIdZalogowanegoUzytkownika(idZalogowanegoUzytkownika);
-    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku();
-}
-
 Adresat AdresatMenager::pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami)
 {
     Adresat adresat;
@@ -122,13 +124,9 @@ Adresat AdresatMenager::pobierzDaneAdresata(string daneAdresataOddzielonePionowy
     return adresat;
 }
 
-void AdresatMenager::wylogujUzytkownika()
+void AdresatMenager::wyczyscVectorAdresatow()
 {
     adresaci.clear();
 }
 
-void AdresatMenager::ustawIdZalogowanegoUzytkownika(int aktualneId)
-{
-    idZalogowanegoUzytkownika = aktualneId;
-}
 

@@ -14,13 +14,19 @@ class PlikZAdresatami
 {
     const string nazwaPlikuZAdresatami;
     bool czyPlikJestPusty();
+    int idOstatniegoAdresata;
+    int idZalogowanegoUzytkownika;
 
 public:
     PlikZAdresatami(string nazwaPliku) : nazwaPlikuZAdresatami(nazwaPliku){};
     void dopiszAdresataDoPliku(Adresat adresat);
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
-    int wczytajAdresatowZalogowanegoUzytkownikaZPliku(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika);
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
+    vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku();
+
+    void ustawIdZalogowanegoUzytkownika(int id);
+    void ustawIdOstatniegoAdresata(int id);
+    int pobierzIdOstatniegoAdresata();
     string pobierzNazwePlikuZAdresatami();
 };
 

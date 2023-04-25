@@ -3,6 +3,7 @@
 void AdresatMenager::dodajAdresata()
 {
     Adresat adresat;
+    int idOstatniegoAdresata = plikZAdresatami.pobierzIdOstatniegoAdresata();
 
     system("cls");
     cout << " >>> DODAWANIE NOWEGO ADRESATA <<<" << endl << endl;
@@ -10,15 +11,14 @@ void AdresatMenager::dodajAdresata()
 
     adresaci.push_back(adresat);
     plikZAdresatami.dopiszAdresataDoPliku(adresat);
-
-    idOstatniegoAdresata ++;
+    plikZAdresatami.ustawIdOstatniegoAdresata(idOstatniegoAdresata + 1);
 }
 
 Adresat AdresatMenager::podajDaneNowegoAdresata()
 {
     Adresat adresat;
 
-    adresat.ustawId(++idOstatniegoAdresata);
+    adresat.ustawId(plikZAdresatami.pobierzIdOstatniegoAdresata() + 1);
     adresat.ustawIdZalogowanegoUzytkownika(idZalogowanegoUzytkownika);
 
     cout << "Podaj imie: ";
@@ -73,35 +73,8 @@ void AdresatMenager::wyswietlDaneAdresata(Adresat adresat)
 
 void AdresatMenager::wczytajAdresatowZalogowanegoUzytkownikaZPliku()
 {
-    Adresat adresat;
-    int idOstatniegoAdresata = 0;
-    string daneJednegoAdresataOddzielonePionowymiKreskami = "";
-    string daneOstaniegoAdresataWPliku = "";
-    fstream plikTekstowy;
-    plikTekstowy.open(plikZAdresatami.pobierzNazwePlikuZAdresatami().c_str(), ios::in);
-
-    if (plikTekstowy.good() == true)
-    {
-        while (getline(plikTekstowy, daneJednegoAdresataOddzielonePionowymiKreskami))
-        {
-            if(idZalogowanegoUzytkownika == MetodyPomocnicze::pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(daneJednegoAdresataOddzielonePionowymiKreskami))
-            {
-                adresat = pobierzDaneAdresata(daneJednegoAdresataOddzielonePionowymiKreskami);
-                adresaci.push_back(adresat);
-            }
-        }
-        daneOstaniegoAdresataWPliku = daneJednegoAdresataOddzielonePionowymiKreskami;
-    }
-    else
-        cout << "Nie udalo sie otworzyc pliku i wczytac danych." << endl;
-
-    plikTekstowy.close();
-
-    if (daneOstaniegoAdresataWPliku != "")
-    {
-        idOstatniegoAdresata = MetodyPomocnicze::pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneOstaniegoAdresataWPliku);
-        ustawIdOstatniegoAdresata(idOstatniegoAdresata);
-    }
+    plikZAdresatami.ustawIdZalogowanegoUzytkownika(idZalogowanegoUzytkownika);
+    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku();
 }
 
 Adresat AdresatMenager::pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami)
@@ -149,11 +122,6 @@ Adresat AdresatMenager::pobierzDaneAdresata(string daneAdresataOddzielonePionowy
     return adresat;
 }
 
-int AdresatMenager::pobierzIdOstatniegoAdresata()
-{
-    return idOstatniegoAdresata;
-}
-
 void AdresatMenager::wylogujUzytkownika()
 {
     adresaci.clear();
@@ -163,10 +131,4 @@ void AdresatMenager::ustawIdZalogowanegoUzytkownika(int aktualneId)
 {
     idZalogowanegoUzytkownika = aktualneId;
 }
-
-void AdresatMenager::ustawIdOstatniegoAdresata(int aktualneId)
-{
-    idOstatniegoAdresata = aktualneId;
-}
-
 

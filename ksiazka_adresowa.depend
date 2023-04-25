@@ -133,17 +133,17 @@
 	<sstream>
 	<algorithm>
 
-1682409520 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresatmenager.cpp
+1682414405 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresatmenager.cpp
 	"AdresatMenager.h"
 
-1682409587 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresatmenager.h
+1682414735 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresatmenager.h
 	<iostream>
 	<vector>
 	<fstream>
 	<sstream>
 	"PlikZAdresatami.h"
 
-1682366687 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\plikzadresatami.h
+1682415078 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\plikzadresatami.h
 	"Adresat.h"
 	"MetodyPomocnicze.h"
 	<iostream>
@@ -168,7 +168,7 @@
 1682326707 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\metodypomocnicze.cpp
 	"MetodyPomocnicze.h"
 
-1682331701 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\plikzadresatami.cpp
+1682414735 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\plikzadresatami.cpp
 	"PlikZAdresatami.h"
 
 1682332218 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\plikzuzytkownikami.cpp

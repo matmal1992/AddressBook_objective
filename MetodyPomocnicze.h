@@ -23,6 +23,8 @@ public:
     static int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     static int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     static string pobierzLiczbe(string tekst, int pozycjaZnaku);
+    static int wczytajLiczbeCalkowita();
+    static int podajIdWybranegoAdresata();
 };
 
 #endif

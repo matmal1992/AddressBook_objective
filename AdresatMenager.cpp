@@ -124,9 +124,100 @@ Adresat AdresatMenager::pobierzDaneAdresata(string daneAdresataOddzielonePionowy
     return adresat;
 }
 
-void AdresatMenager::wyczyscVectorAdresatow()
+//=============================USUN ADRESATA=========================
+
+void AdresatMenager::usunAdresata()
 {
-    adresaci.clear();
+    int idUsuwanegoAdresata = 0;
+
+    system("cls");
+    cout << ">>> USUWANIE WYBRANEGO ADRESATA <<<" << endl << endl;
+    idUsuwanegoAdresata = MetodyPomocnicze::podajIdWybranegoAdresata();
+
+    char znak;
+    bool czyIstniejeAdresat = false;
+
+    for (vector <Adresat>::iterator itr = adresaci.begin(); itr != adresaci.end(); itr++)
+    {
+        if (itr ->pobierzId() == idUsuwanegoAdresata)
+        {
+            czyIstniejeAdresat = true;
+            cout << endl << "Potwierdz naciskajac klawisz 't': ";
+            znak = MetodyPomocnicze::wczytajZnak();
+            if (znak == 't')
+            {
+                usunWybranaLinieWPliku(idUsuwanegoAdresata);
+                adresaci.erase(itr);
+                cout << endl << endl << "Szukany adresat zostal USUNIETY" << endl << endl;
+                system("pause");
+                //return idUsuwanegoAdresata;
+            }
+            else
+            {
+                cout << endl << endl << "Wybrany adresat NIE zostal usuniety" << endl << endl;
+                system("pause");
+                return;
+            }
+        }
+    }
+    if (czyIstniejeAdresat == false)
+    {
+        cout << endl << "Nie ma takiego adresata w ksiazce adresowej" << endl << endl;
+        system("pause");
+    }
 }
 
+void AdresatMenager::usunWybranaLinieWPliku(int idAdresata)
+{
+    fstream odczytywanyPlikTekstowy, tymczasowyPlikTekstowy;
+    string wczytanaLinia = "";
+    int idZLinii{};
 
+    odczytywanyPlikTekstowy.open(plikZAdresatami.pobierzNazwePlikuZAdresatami().c_str(), ios::in);
+    tymczasowyPlikTekstowy.open(plikZAdresatami.pobierzNazwePlikuTymczasowego().c_str(), ios::out | ios::app);
+
+    if (odczytywanyPlikTekstowy.good() == true && idAdresata != 0)
+    {
+        while (getline(odczytywanyPlikTekstowy, wczytanaLinia))
+        {
+            idZLinii = MetodyPomocnicze::pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia);
+
+            if (idZLinii == idAdresata) {}
+            else
+                {
+                    if(czyPlikJestPusty(tymczasowyPlikTekstowy))
+                        tymczasowyPlikTekstowy << wczytanaLinia;
+                    else
+                        tymczasowyPlikTekstowy << endl << wczytanaLinia;
+                }
+        }
+        odczytywanyPlikTekstowy.close();
+        tymczasowyPlikTekstowy.close();
+
+        usunPlik(plikZAdresatami.pobierzNazwePlikuZAdresatami());
+        zmienNazwePliku(plikZAdresatami.pobierzNazwePlikuTymczasowego(), plikZAdresatami.pobierzNazwePlikuZAdresatami());
+    }
+}
+
+void AdresatMenager::zmienNazwePliku(string staraNazwa, string nowaNazwa)
+{
+    if (rename(staraNazwa.c_str(), nowaNazwa.c_str()) == 0) {}
+    else
+        cout << "Nazwa pliku nie zostala zmieniona." << staraNazwa << endl;
+}
+
+void AdresatMenager::usunPlik(string nazwaPlikuZRozszerzeniem)
+{
+    if (remove(nazwaPlikuZRozszerzeniem.c_str()) == 0) {}
+    else
+        cout << "Nie udalo sie usunac pliku " << nazwaPlikuZRozszerzeniem << endl;
+}
+
+bool AdresatMenager::czyPlikJestPusty(fstream &plikTekstowy)
+{
+    plikTekstowy.seekg(0, ios::end);
+    if (plikTekstowy.tellg() == 0)
+        return true;
+    else
+        return false;
+}

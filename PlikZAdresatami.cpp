@@ -143,4 +143,8 @@ int PlikZAdresatami::pobierzIdOstatniegoAdresata()
     return idOstatniegoAdresata;
 }
 
+string PlikZAdresatami::pobierzNazwePlikuTymczasowego()
+{
+    return NAZWA_PLIKU_TYMCZASOWEGO;
+}
 

@@ -25,10 +25,15 @@ public:
 
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
-    void wyczyscVectorAdresatow();
     Adresat podajDaneNowegoAdresata();
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
     void wyswietlDaneAdresata(Adresat adresat);
+
+    void usunAdresata();
+    void usunWybranaLinieWPliku(int numerUsuwanejLinii);
+    void zmienNazwePliku(string staraNazwa, string nowaNazwa);
+    void usunPlik(string nazwaPlikuZRozszerzeniem);
+    bool czyPlikJestPusty(fstream &plikTekstowy);
 };
 
 #endif

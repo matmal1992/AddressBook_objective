@@ -22,11 +22,6 @@ void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
     uzytkownikMenager.zmianaHaslaZalogowanegoUzytkownika();
 }
 
-void KsiazkaAdresowa::dodajAdresata()
-{
-    adresatMenager->dodajAdresata();
-}
-
 char KsiazkaAdresowa::wybierzOpcjeZMenuUzytkownika()
 {
     char wybor;
@@ -94,7 +89,7 @@ void KsiazkaAdresowa::wyswietlMenuUzytkownika()
         switch (wybierzOpcjeZMenuUzytkownika())
         {
         case '1':
-            dodajAdresata();
+            adresatMenager->dodajAdresata();
             break;
         case '2':
             //wyszukajAdresatowPoImieniu(adresaci);
@@ -106,7 +101,7 @@ void KsiazkaAdresowa::wyswietlMenuUzytkownika()
             adresatMenager->wyswietlWszystkichAdresatow();
             break;
         case '5':
-            //idUsunietegoAdresata = usunAdresata(adresaci);
+            adresatMenager->usunAdresata();
             //idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
             break;
         case '6':

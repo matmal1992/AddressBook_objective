@@ -13,6 +13,7 @@ using namespace std;
 class PlikZAdresatami
 {
     const string NAZWA_PLIKU_Z_ADRESATAMI;
+    const string NAZWA_PLIKU_TYMCZASOWEGO;
     const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
     int idOstatniegoAdresata;
 
@@ -20,7 +21,7 @@ class PlikZAdresatami
 
 public:
     PlikZAdresatami(string nazwaPliku, int idZalogowanegoUzytkownika)
-    : NAZWA_PLIKU_Z_ADRESATAMI(nazwaPliku), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika)
+    : NAZWA_PLIKU_Z_ADRESATAMI(nazwaPliku), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika), NAZWA_PLIKU_TYMCZASOWEGO("PlikTymczasowy.txt")
     {
         idOstatniegoAdresata = 0;
     };
@@ -34,6 +35,7 @@ public:
     void ustawIdOstatniegoAdresata(int id);
     int pobierzIdOstatniegoAdresata();
     string pobierzNazwePlikuZAdresatami();
+    string pobierzNazwePlikuTymczasowego();
 };
 
 #endif

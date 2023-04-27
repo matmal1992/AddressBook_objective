@@ -95,7 +95,7 @@ void KsiazkaAdresowa::wyswietlMenuUzytkownika()
             adresatMenager->wyszukajAdresatowPoImieniu();
             break;
         case '3':
-            //wyszukajAdresatowPoNazwisku(adresaci);
+            adresatMenager->wyszukajAdresatowPoNazwisku();
             break;
         case '4':
             adresatMenager->wyswietlWszystkichAdresatow();

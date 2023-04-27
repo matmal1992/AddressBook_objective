@@ -136,7 +136,7 @@
 1682582806 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresatmenager.cpp
 	"AdresatMenager.h"
 
-1682582702 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresatmenager.h
+1682583133 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresatmenager.h
 	<iostream>
 	<vector>
 	<fstream>
@@ -151,7 +151,7 @@
 	<fstream>
 	<sstream>
 
-1682582701 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\ksiazkaadresowa.cpp
+1682583133 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\ksiazkaadresowa.cpp
 	"ksiazkaAdresowa.h"
 	"UzytkownikMenager.h"
 

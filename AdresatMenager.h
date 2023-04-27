@@ -34,6 +34,13 @@ public:
     void zmienNazwePliku(string staraNazwa, string nowaNazwa);
     void usunPlik(string nazwaPlikuZRozszerzeniem);
     bool czyPlikJestPusty(fstream &plikTekstowy);
+
+    void edytujAdresata();
+    char wybierzOpcjeZMenuEdycja();
+    void zaktualizujDaneWybranegoAdresata(Adresat adresat);
+    string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
+    void edytujWybranaLinieWPliku(int idEdytowanegoAdresata, string liniaZDanymiAdresataOddzielonePionowymiKreskami);
+
 };
 
 #endif

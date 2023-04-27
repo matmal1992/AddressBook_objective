@@ -1,6 +1,6 @@
 #include "ksiazkaAdresowa.h"
 #include "UzytkownikMenager.h"
-
+/*
 void KsiazkaAdresowa::rejestracjaUzytkownika()
 {
     uzytkownikMenager.rejestracjaUzytkownika();
@@ -13,13 +13,61 @@ void KsiazkaAdresowa::logowanieUzytkownika()
     if(uzytkownikMenager.czyUzytkownikJestZalogowany())
     {
         adresatMenager = new AdresatMenager(NAZWA_PLIKU_Z_ADRESATAMI, uzytkownikMenager.pobierzIdZalogowanegoUzytkownika());
-        wyswietlMenuUzytkownika();
+        przejdzDoMenuUzytkownika();
     }
 }
 
 void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
 {
     uzytkownikMenager.zmianaHaslaZalogowanegoUzytkownika();
+}
+*/
+
+char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego()
+{
+    char wybor;
+
+    system("cls");
+    cout << "    >>> MENU  GLOWNE <<<" << endl;
+    cout << "---------------------------" << endl;
+    cout << "1. Rejestracja" << endl;
+    cout << "2. Logowanie" << endl;
+    cout << "9. Koniec programu" << endl;
+    cout << "---------------------------" << endl;
+    cout << "Twoj wybor: ";
+    wybor = MetodyPomocnicze::wczytajZnak();
+
+    return wybor;
+}
+
+void KsiazkaAdresowa::przejdzDoMenuGlownego()
+{
+    while (true)
+    {
+        if (uzytkownikMenager.pobierzIdZalogowanegoUzytkownika() == 0)
+        {
+            switch (wybierzOpcjeZMenuGlownego())
+            {
+            case '1': uzytkownikMenager.rejestracjaUzytkownika();
+                break;
+            case '2':
+                uzytkownikMenager.logowanieUzytkownika();
+
+                if(uzytkownikMenager.czyUzytkownikJestZalogowany())
+                {
+                    adresatMenager = new AdresatMenager(NAZWA_PLIKU_Z_ADRESATAMI, uzytkownikMenager.pobierzIdZalogowanegoUzytkownika());
+                    przejdzDoMenuUzytkownika();
+                }
+                break;
+            case '9':
+                exit(0); break;
+            default:
+                cout << endl << "Nie ma takiej opcji w menu." << endl << endl;
+                system("pause");
+                break;
+            }
+        }
+    }
 }
 
 char KsiazkaAdresowa::wybierzOpcjeZMenuUzytkownika()
@@ -45,69 +93,25 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuUzytkownika()
     return wybor;
 }
 
-char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego()
-{
-    char wybor;
-
-    system("cls");
-    cout << "    >>> MENU  GLOWNE <<<" << endl;
-    cout << "---------------------------" << endl;
-    cout << "1. Rejestracja" << endl;
-    cout << "2. Logowanie" << endl;
-    cout << "9. Koniec programu" << endl;
-    cout << "---------------------------" << endl;
-    cout << "Twoj wybor: ";
-    wybor = MetodyPomocnicze::wczytajZnak();
-
-    return wybor;
-}
-
-void KsiazkaAdresowa::wyswietlMenuGlowne()
-{
-    while (true)
-    {
-        if (uzytkownikMenager.pobierzIdZalogowanegoUzytkownika() == 0)
-        {
-            switch (wybierzOpcjeZMenuGlownego())
-            {
-            case '1': rejestracjaUzytkownika(); break;
-            case '2': logowanieUzytkownika(); break;
-            case '9': exit(0); break;
-            default:
-                cout << endl << "Nie ma takiej opcji w menu." << endl << endl;
-                system("pause");
-                break;
-            }
-        }
-    }
-}
-
-void KsiazkaAdresowa::wyswietlMenuUzytkownika()
+void KsiazkaAdresowa::przejdzDoMenuUzytkownika()
 {
     while(uzytkownikMenager.pobierzIdZalogowanegoUzytkownika() != 0)
     {
         switch (wybierzOpcjeZMenuUzytkownika())
         {
-        case '1':
-            adresatMenager->dodajAdresata();
+        case '1': adresatMenager->dodajAdresata();
             break;
-        case '2':
-            adresatMenager->wyszukajAdresatowPoImieniu();
+        case '2': adresatMenager->wyszukajAdresatowPoImieniu();
             break;
-        case '3':
-            adresatMenager->wyszukajAdresatowPoNazwisku();
+        case '3': adresatMenager->wyszukajAdresatowPoNazwisku();
             break;
-        case '4':
-            adresatMenager->wyswietlWszystkichAdresatow();
+        case '4': adresatMenager->wyswietlWszystkichAdresatow();
             break;
-        case '5':
-            adresatMenager->usunAdresata();
+        case '5': adresatMenager->usunAdresata();
             break;
-        case '6':
-            adresatMenager->edytujAdresata();
+        case '6': adresatMenager->edytujAdresata();
             break;
-        case '7':
-            zmianaHaslaZalogowanegoUzytkownika();
+        case '7': uzytkownikMenager.zmianaHaslaZalogowanegoUzytkownika();
             break;
         case '8':
             uzytkownikMenager.wylogujUzytkownika();

@@ -7,22 +7,22 @@ using namespace std;
 
 class Adresat
 {
-    int id{};
-    int idUzytkownika{};
-    string imie{};
-    string nazwisko{};
-    string adres{};
-    string email{};
-    string telefon{};
+    int id;
+    int idUzytkownika;
+    string imie;
+    string nazwisko;
+    string adres;
+    string email;
+    string telefon;
 
 public:
     void ustawIdZalogowanegoUzytkownika(int idZalogowanegoUzytkownika);
-    void ustawId(int noweId);
-    void ustawImie(string noweImie);
-    void ustawNazwisko(string noweNazwisko);
-    void ustawAdres(string nowyAdres);
-    void ustawEmail(string nowyEmail);
-    void ustawTelefon(string nowTelefon);
+    void ustawId(int id);
+    void ustawImie(string imie);
+    void ustawNazwisko(string nazwisko);
+    void ustawAdres(string adres);
+    void ustawEmail(string email);
+    void ustawTelefon(string telefon);
 
     int pobierzId();
     int pobierzIdUzytkownika();

@@ -15,6 +15,13 @@ class AdresatMenager
     PlikZAdresatami plikZAdresatami;
     const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
 
+    char wybierzOpcjeZMenuEdycja();
+    void wyswietlDaneAdresata(Adresat adresat);
+    string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
+    void zaktualizujDaneWybranegoAdresata(Adresat adresat);
+    Adresat podajDaneNowegoAdresata();
+    Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
+
 public:
     AdresatMenager();
     AdresatMenager(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
@@ -24,26 +31,11 @@ public:
     };
 
     void dodajAdresata();
-    void wyswietlWszystkichAdresatow();
-    Adresat podajDaneNowegoAdresata();
-    Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
-    void wyswietlDaneAdresata(Adresat adresat);
-
-    void usunAdresata();
-    void usunWybranaLinieWPliku(int numerUsuwanejLinii);
-    void zmienNazwePliku(string staraNazwa, string nowaNazwa);
-    void usunPlik(string nazwaPlikuZRozszerzeniem);
-    bool czyPlikJestPusty(fstream &plikTekstowy);
-
-    void edytujAdresata();
-    char wybierzOpcjeZMenuEdycja();
-    void zaktualizujDaneWybranegoAdresata(Adresat adresat);
-    string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
-    void edytujWybranaLinieWPliku(int idEdytowanegoAdresata, string liniaZDanymiAdresataOddzielonePionowymiKreskami);
-
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
-
+    void wyswietlWszystkichAdresatow();
+    void edytujAdresata();
+    void usunAdresata();
 };
 
 #endif

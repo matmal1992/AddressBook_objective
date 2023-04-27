@@ -25,7 +25,7 @@ Uzytkownik UzytkownikMenager::podajDaneNowegoUzytkownika()
         cout << "Podaj login: ";
         cin >> login;
         uzytkownik.ustawLogin(login);
-    } while (czyIstniejeLogin(uzytkownik.pobierzLogin()) == true);
+    } while (czyIstniejeLogin(uzytkownik.pobierzLogin()));
 
     cout << "Podaj haslo: ";
     cin >> haslo;
@@ -36,7 +36,7 @@ Uzytkownik UzytkownikMenager::podajDaneNowegoUzytkownika()
 
 int UzytkownikMenager::pobierzIdNowegoUzytkownika()
 {
-    if (uzytkownicy.empty() == true)
+    if (uzytkownicy.empty())
         return 1;
     else
         return uzytkownicy.back().pobierzId() + 1;
@@ -44,9 +44,9 @@ int UzytkownikMenager::pobierzIdNowegoUzytkownika()
 
 bool UzytkownikMenager::czyIstniejeLogin(string login)
 {
-    for(size_t i = 0; i < uzytkownicy.size(); i++)
+    for(vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); ++itr)
     {
-        if(uzytkownicy[i].pobierzLogin() == login)
+        if(itr->pobierzLogin() == login)
         {
             cout << endl << "Istnieje uzytkownik o takim loginie." << endl;
             return true;
@@ -58,7 +58,7 @@ bool UzytkownikMenager::czyIstniejeLogin(string login)
 void UzytkownikMenager::logowanieUzytkownika()
 {
     Uzytkownik uzytkownik;
-    string login = "", haslo = "";
+    string login{}, haslo{};
 
     cout << endl << "Podaj login: ";
     login = MetodyPomocnicze::wczytajLinie();
@@ -91,24 +91,9 @@ void UzytkownikMenager::logowanieUzytkownika()
     system("pause");
 }
 
-void UzytkownikMenager::ustawIdZalogowanegoUzytkownika(int aktualneId)
-{
-    idZalogowanegoUzytkownika = aktualneId;
-}
-
-void UzytkownikMenager::wylogujUzytkownika()
-{
-    idZalogowanegoUzytkownika = 0;
-}
-
-int UzytkownikMenager::pobierzIdZalogowanegoUzytkownika()
-{
-    return idZalogowanegoUzytkownika;
-}
-
 void UzytkownikMenager::zmianaHaslaZalogowanegoUzytkownika()
 {
-    string noweHaslo = "";
+    string noweHaslo{};
     cout << "Podaj nowe haslo: ";
     noweHaslo = MetodyPomocnicze::wczytajLinie();
 
@@ -130,4 +115,19 @@ bool UzytkownikMenager::czyUzytkownikJestZalogowany()
         return true;
     else
         return false;
+}
+
+void UzytkownikMenager::ustawIdZalogowanegoUzytkownika(int id)
+{
+    idZalogowanegoUzytkownika = id;
+}
+
+void UzytkownikMenager::wylogujUzytkownika()
+{
+    idZalogowanegoUzytkownika = 0;
+}
+
+int UzytkownikMenager::pobierzIdZalogowanegoUzytkownika()
+{
+    return idZalogowanegoUzytkownika;
 }

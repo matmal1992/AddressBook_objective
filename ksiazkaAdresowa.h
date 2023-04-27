@@ -26,14 +26,13 @@ public:
         adresatMenager = NULL;
     }
 
-    void rejestracjaUzytkownika();
-    void logowanieUzytkownika();
-    void zmianaHaslaZalogowanegoUzytkownika();
+    //void rejestracjaUzytkownika();
+    //void logowanieUzytkownika();
+    //void zmianaHaslaZalogowanegoUzytkownika();
     char wybierzOpcjeZMenuUzytkownika();
     char wybierzOpcjeZMenuGlownego();
-    void wyswietlMenuGlowne();
-    void wyswietlMenuUzytkownika();
-
+    void przejdzDoMenuGlownego();
+    void przejdzDoMenuUzytkownika();
 };
 
 #endif

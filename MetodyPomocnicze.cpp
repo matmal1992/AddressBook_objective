@@ -19,14 +19,14 @@ int MetodyPomocnicze::konwersjaStringNaInt(string liczba)
 
 string MetodyPomocnicze::wczytajLinie()
 {
-    string wejscie = "";
+    string wejscie{};
     getline(cin, wejscie);
     return wejscie;
 }
 
 char MetodyPomocnicze::wczytajZnak()
 {
-    string wejscie = "";
+    string wejscie{};
     char znak = {0};
 
     while (true)
@@ -45,7 +45,7 @@ char MetodyPomocnicze::wczytajZnak()
 
 string MetodyPomocnicze::pobierzLiczbe(string tekst, int pozycjaZnaku)
 {
-    string liczba = "";
+    string liczba{};
     while(isdigit(tekst[pozycjaZnaku]) == true)
     {
         liczba += tekst[pozycjaZnaku];
@@ -81,7 +81,7 @@ int MetodyPomocnicze::pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(s
 
 int MetodyPomocnicze::wczytajLiczbeCalkowita()
 {
-    string wejscie = "";
+    string wejscie{};
     int liczba = 0;
 
     while (true)

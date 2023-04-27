@@ -92,7 +92,7 @@ void KsiazkaAdresowa::wyswietlMenuUzytkownika()
             adresatMenager->dodajAdresata();
             break;
         case '2':
-            //wyszukajAdresatowPoImieniu(adresaci);
+            adresatMenager->wyszukajAdresatowPoImieniu();
             break;
         case '3':
             //wyszukajAdresatowPoNazwisku(adresaci);
@@ -102,7 +102,6 @@ void KsiazkaAdresowa::wyswietlMenuUzytkownika()
             break;
         case '5':
             adresatMenager->usunAdresata();
-            //idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
             break;
         case '6':
             adresatMenager->edytujAdresata();

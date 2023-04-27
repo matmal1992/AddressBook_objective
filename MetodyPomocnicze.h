@@ -25,6 +25,7 @@ public:
     static string pobierzLiczbe(string tekst, int pozycjaZnaku);
     static int wczytajLiczbeCalkowita();
     static int podajIdWybranegoAdresata();
+    static void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
 };
 
 #endif

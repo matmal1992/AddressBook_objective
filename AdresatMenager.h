@@ -41,6 +41,8 @@ public:
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
     void edytujWybranaLinieWPliku(int idEdytowanegoAdresata, string liniaZDanymiAdresataOddzielonePionowymiKreskami);
 
+    void wyszukajAdresatowPoImieniu();
+
 };
 
 #endif

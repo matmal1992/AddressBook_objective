@@ -1,26 +1,16 @@
 #include "PlikZAdresatami.h"
 
-bool PlikZAdresatami::czyPlikJestPusty()
-{
-    fstream plikTekstowy;
-    plikTekstowy.seekg(0, ios::end);
-    if (plikTekstowy.tellg() == 0)
-        return true;
-    else
-        return false;
-}
-
 bool PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)
 {
     string liniaZDanymiAdresata{};
     fstream plikTekstowy;
-    plikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::out | ios::app);
+    plikTekstowy.open(PlikTekstowy::pobierzNazwePliku().c_str(), ios::out | ios::app);
 
     if (plikTekstowy.good())
     {
         liniaZDanymiAdresata = zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(adresat);
 
-        if (czyPlikJestPusty())
+        if (PlikTekstowy::czyPlikJestPusty(plikTekstowy))
             plikTekstowy << liniaZDanymiAdresata;
         else
             plikTekstowy << endl << liniaZDanymiAdresata ;
@@ -87,7 +77,7 @@ Adresat PlikZAdresatami::pobierzDaneAdresata(string daneAdresataOddzielonePionow
 
 string PlikZAdresatami::pobierzNazwePlikuZAdresatami()
 {
-    return NAZWA_PLIKU_Z_ADRESATAMI;
+    return PlikTekstowy::pobierzNazwePliku();
 }
 
 vector <Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku()
@@ -98,7 +88,7 @@ vector <Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(
     string daneJednegoAdresataOddzielonePionowymiKreskami{};
     string daneOstaniegoAdresataWPliku{};
     fstream plikTekstowy;
-    plikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::in);
+    plikTekstowy.open(PlikTekstowy::pobierzNazwePliku().c_str(), ios::in);
 
     if (plikTekstowy.good())
     {
@@ -159,7 +149,7 @@ void PlikZAdresatami::usunWybranaLinieWPliku(int idAdresata)
             if (idZLinii == idAdresata) {}
             else
                 {
-                    if(czyPlikJestPusty(tymczasowyPlikTekstowy))
+                    if(PlikTekstowy::czyPlikJestPusty(tymczasowyPlikTekstowy))
                         tymczasowyPlikTekstowy << wczytanaLinia;
                     else
                         tymczasowyPlikTekstowy << endl << wczytanaLinia;
@@ -171,15 +161,6 @@ void PlikZAdresatami::usunWybranaLinieWPliku(int idAdresata)
         usunPlik(pobierzNazwePlikuZAdresatami());
         zmienNazwePliku(pobierzNazwePlikuTymczasowego(), pobierzNazwePlikuZAdresatami());
     }
-}
-
-bool PlikZAdresatami::czyPlikJestPusty(fstream &plikTekstowy)
-{
-    plikTekstowy.seekg(0, ios::end);
-    if (plikTekstowy.tellg() == 0)
-        return true;
-    else
-        return false;
 }
 
 void PlikZAdresatami::usunPlik(string nazwaPlikuZRozszerzeniem)
@@ -215,7 +196,7 @@ void PlikZAdresatami::edytujWybranaLinieWPliku(int idEdytowanegoAdresata, string
                 tymczasowyPlikTekstowy <<  endl <<liniaZDanymiAdresataOddzielonePionowymiKreskami;
             else
             {
-                if(czyPlikJestPusty(tymczasowyPlikTekstowy))
+                if(PlikTekstowy::czyPlikJestPusty(tymczasowyPlikTekstowy))
                     tymczasowyPlikTekstowy << wczytanaLinia;
                 else
                     tymczasowyPlikTekstowy << endl << wczytanaLinia;

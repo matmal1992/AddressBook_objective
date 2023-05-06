@@ -150,7 +150,7 @@ void AdresatMenager::usunAdresata()
             }
         }
     }
-    if (czyIstniejeAdresat == false)
+    if (!czyIstniejeAdresat)
     {
         cout << endl << "Nie ma takiego adresata w ksiazce adresowej" << endl << endl;
         system("pause");
@@ -246,7 +246,7 @@ void AdresatMenager::zaktualizujDaneWybranegoAdresata(Adresat adresat)
     string liniaZDanymiAdresata{};
 
     liniaZDanymiAdresata = zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(adresat);
-    plikZAdresatami.edytujWybranaLinieWPliku(adresat.pobierzId(), liniaZDanymiAdresata);
+    plikZAdresatami.edytujWybranaLinieWPliku(liniaZDanymiAdresata);
 
     cout << endl << "Dane zostaly zaktualizowane." << endl << endl;
 }

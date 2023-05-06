@@ -31,7 +31,7 @@ char MetodyPomocnicze::wczytajZnak()
 
     while (true)
     {
-        getline(cin, wejscie);
+        wejscie = wczytajLinie();
 
         if (wejscie.length() == 1)
         {
@@ -86,7 +86,7 @@ int MetodyPomocnicze::wczytajLiczbeCalkowita()
 
     while (true)
     {
-        getline(cin, wejscie);
+        wejscie = wczytajLinie();
 
         stringstream myStream(wejscie);
         if (myStream >> liczba)

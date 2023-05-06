@@ -7,7 +7,7 @@ using namespace std;
 
 class Adresat
 {
-    int id{};
+    int idAdresata;
     int idUzytkownika;
     string imie;
     string nazwisko;

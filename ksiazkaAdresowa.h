@@ -26,9 +26,6 @@ public:
         adresatMenager = NULL;
     }
 
-    //void rejestracjaUzytkownika();
-    //void logowanieUzytkownika();
-    //void zmianaHaslaZalogowanegoUzytkownika();
     char wybierzOpcjeZMenuUzytkownika();
     char wybierzOpcjeZMenuGlownego();
     void przejdzDoMenuGlownego();

@@ -1,27 +1,5 @@
 #include "ksiazkaAdresowa.h"
 #include "UzytkownikMenager.h"
-/*
-void KsiazkaAdresowa::rejestracjaUzytkownika()
-{
-    uzytkownikMenager.rejestracjaUzytkownika();
-}
-
-void KsiazkaAdresowa::logowanieUzytkownika()
-{
-    uzytkownikMenager.logowanieUzytkownika();
-
-    if(uzytkownikMenager.czyUzytkownikJestZalogowany())
-    {
-        adresatMenager = new AdresatMenager(NAZWA_PLIKU_Z_ADRESATAMI, uzytkownikMenager.pobierzIdZalogowanegoUzytkownika());
-        przejdzDoMenuUzytkownika();
-    }
-}
-
-void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
-{
-    uzytkownikMenager.zmianaHaslaZalogowanegoUzytkownika();
-}
-*/
 
 char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego()
 {

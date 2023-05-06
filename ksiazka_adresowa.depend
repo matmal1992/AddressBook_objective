@@ -105,7 +105,7 @@
 1682617095 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresat.cpp
 	"Adresat.h"
 
-1682627817 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresat.h
+1683375158 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresat.h
 	<iostream>
 
 1682606407 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\uzytkownikmenager.h
@@ -118,7 +118,7 @@
 1682606387 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\uzytkownik.h
 	<iostream>
 
-1682626898 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\plikzuzytkownikami.h
+1682628075 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\plikzuzytkownikami.h
 	"MetodyPomocnicze.h"
 	"Uzytkownik.h"
 	"PlikTekstowy.h"
@@ -134,17 +134,17 @@
 	<sstream>
 	<algorithm>
 
-1682620215 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresatmenager.cpp
+1683374681 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresatmenager.cpp
 	"AdresatMenager.h"
 
-1682618579 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresatmenager.h
+1683370860 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\adresatmenager.h
 	<iostream>
 	<vector>
 	<fstream>
 	<sstream>
 	"PlikZAdresatami.h"
 
-1682626861 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\plikzadresatami.h
+1683374705 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\plikzadresatami.h
 	"Adresat.h"
 	"MetodyPomocnicze.h"
 	"PlikTekstowy.h"
@@ -153,11 +153,11 @@
 	<fstream>
 	<sstream>
 
-1682605346 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\ksiazkaadresowa.cpp
+1683201279 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\ksiazkaadresowa.cpp
 	"ksiazkaAdresowa.h"
 	"UzytkownikMenager.h"
 
-1682605346 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\ksiazkaadresowa.h
+1683201279 c:\users\mateusz\desktop\ks2\ksiazka_adresowa\ksiazkaadresowa.h
 	<iostream>
 	"UzytkownikMenager.h"
 	"AdresatMenager.h"
@@ -167,10 +167,10 @@
 	<vector>
 	"ksiazkaAdresowa.h"
 
-1682621587 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\metodypomocnicze.cpp
+1683374934 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\metodypomocnicze.cpp
 	"MetodyPomocnicze.h"
 
-1682627062 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\plikzadresatami.cpp
+1683374681 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\plikzadresatami.cpp
 	"PlikZAdresatami.h"
 
 1682627115 source:c:\users\mateusz\desktop\ks2\ksiazka_adresowa\plikzuzytkownikami.cpp

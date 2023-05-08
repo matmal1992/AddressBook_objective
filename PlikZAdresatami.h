@@ -18,10 +18,8 @@ class PlikZAdresatami : public PlikTekstowy
 
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
-    void ustawIdZalogowanegoUzytkownika(int id);
     string pobierzNazwePlikuZAdresatami();
     string pobierzNazwePlikuTymczasowego();
-
     void usunPlik(string nazwaPlikuZRozszerzeniem);
     void zmienNazwePliku(string staraNazwa, string nowaNazwa);
 

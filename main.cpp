@@ -1,13 +1,13 @@
 #include <iostream>
 #include <vector>
-#include "ksiazkaAdresowa.h"
+#include "AddressBook.h"
 
 using namespace std;
 
 int main()
 {
-    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
-    ksiazkaAdresowa.przejdzDoMenuGlownego();
+    AddressBook addressBook("Users.txt", "Addressees.txt");
+    addressBook.goToMainMenu();
 
     return 0;
 }
